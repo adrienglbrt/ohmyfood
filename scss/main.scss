@@ -1,0 +1,118 @@
+// Variables
+
+$title-font: 'Shrikhand', cursive;
+$main-font: 'Raleway', sans-serif;
+$primary-color: #9356dc;
+$secondary-color: #ff79dA;
+$tertiary-color: #99e2d0;
+$background-color-light: #f6f6f6;
+$background-color-mid: #eaeaea;
+$background-color-dark: #353535;
+
+// Base
+
+body {
+    font-family: $main-font;
+    margin: 0;
+}
+
+h1, h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.button {
+    &--main {
+        font-size: 1rem;
+        margin-bottom: 4rem;
+    }
+}
+
+// Header
+
+header {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    img {
+        width: 12rem;
+    }
+}
+
+// Main
+
+.location {
+    height: 3.5rem;
+    background-color: $background-color-mid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    p {
+        font-weight: 500;
+    }
+}
+
+.introduction {
+    padding: 0 1.2rem;
+    background-color: $background-color-light;
+    text-align: center;
+    h1 {
+        margin-top: 3rem;
+    }
+}
+
+.tutorial {
+    padding: 0 1rem;
+}
+
+.restaurants {
+    padding: 0 1rem;
+    background-color: $background-color-light;
+    .card {
+        width: 100%;
+        border-radius: 1rem;
+        &__image {
+            height: 10rem;
+            width: 100%;
+            object-fit: cover;
+        }
+        &__body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+// Footer
+
+footer {
+    background-color: $background-color-dark;
+    color: #fff;
+    padding-left: 1rem;
+    h4 {
+        font-family: $title-font;
+        font-size: 1.2rem;
+    } 
+}
