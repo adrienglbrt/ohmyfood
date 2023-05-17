@@ -151,6 +151,12 @@ main {
             flex-direction: column;
             row-gap: 0.5rem;
         }
+        &__title {
+            font-weight: 700;
+        }
+        &__subtitle {
+            font-weight: 300;
+        }
         &__heart {
             font-size: 1.5rem;
         }

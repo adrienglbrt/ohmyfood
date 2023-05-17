@@ -132,6 +132,12 @@ main h1, main h2 {
   flex-direction: column;
   row-gap: 0.5rem;
 }
+.restaurants .card__title {
+  font-weight: 700;
+}
+.restaurants .card__subtitle {
+  font-weight: 300;
+}
 .restaurants .card__heart {
   font-size: 1.5rem;
 }
