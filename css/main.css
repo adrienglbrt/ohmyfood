@@ -1,10 +1,11 @@
-body {
-  font-family: "Raleway", sans-serif;
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
   margin: 0;
 }
 
-h1, h2 {
-  font-size: 1.5rem;
+body {
+  font-family: "Raleway", sans-serif;
 }
 
 p {
@@ -27,18 +28,31 @@ button {
   cursor: pointer;
 }
 
-.button--main {
+.button--primary {
   font-size: 1rem;
-  margin-bottom: 4rem;
+  margin: 2rem 0;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  background: linear-gradient(360deg, #9356dc 0%, #ff79dA 100%);
+  box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.25);
 }
 
 header {
   height: 4rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 header img {
   width: 12rem;
+}
+
+main h1, main h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .location {
@@ -55,25 +69,49 @@ header img {
 }
 
 .introduction {
-  padding: 0 1.2rem;
+  padding: 3rem 1.2rem;
   background-color: #f6f6f6;
   text-align: center;
 }
-.introduction h1 {
-  margin-top: 3rem;
-}
 
 .tutorial {
-  padding: 0 1rem;
+  padding: 3rem 1rem;
+}
+.tutorial__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.tutorial__step {
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+  background-color: #f6f6f6;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+}
+.tutorial__step i {
+  font-size: 1.5rem;
+}
+.tutorial__step p {
+  font-weight: 500;
 }
 
 .restaurants {
-  padding: 0 1rem;
+  padding: 3rem 1rem;
   background-color: #f6f6f6;
+}
+.restaurants__cards {
+  display: flex;
 }
 .restaurants .card {
   width: 100%;
   border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
 }
 .restaurants .card__image {
   height: 10rem;
@@ -81,17 +119,23 @@ header img {
   object-fit: cover;
 }
 .restaurants .card__body {
+  padding: 1rem;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.restaurants .card__body__heart {
+  font-size: 10rem;
 }
 
 footer {
   background-color: #353535;
   color: #fff;
-  padding-left: 1rem;
+  padding: 1.5rem 1rem;
 }
 footer h4 {
+  margin-bottom: 1rem;
   font-family: "Shrikhand", cursive;
   font-size: 1.2rem;
 }

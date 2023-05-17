@@ -11,19 +11,20 @@ $background-color-dark: #353535;
 
 // Base
 
-body {
-    font-family: $main-font;
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
     margin: 0;
 }
 
-h1, h2 {
-    font-size: 1.5rem;
+body {
+    font-family: $main-font;
 }
 
 p {
     font-size: 1rem;
 }
-
+    
 ul {
     padding-left: 0;
 }
@@ -41,9 +42,16 @@ button {
 }
 
 .button {
-    &--main {
+    &--primary {
         font-size: 1rem;
-        margin-bottom: 4rem;
+        margin: 2rem 0;
+        border: none;
+        border-radius: 1.5rem;
+        padding: 0.8rem 1.2rem;
+        color: #fff;
+        font-weight: 500;
+        background: linear-gradient(360deg, $primary-color 0%, $secondary-color 100%);
+        box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.25);
     }
 }
 
@@ -53,12 +61,20 @@ header {
     height: 4rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     img {
         width: 12rem;
     }
 }
 
 // Main
+
+main {
+    h1, h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
 
 .location {
     height: 3.5rem;
@@ -74,33 +90,71 @@ header {
 }
 
 .introduction {
-    padding: 0 1.2rem;
+    padding: 3rem 1.2rem;
     background-color: $background-color-light;
     text-align: center;
-    h1 {
-        margin-top: 3rem;
-    }
 }
 
 .tutorial {
-    padding: 0 1rem;
+    padding: 3rem 1rem;
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    &__step {
+        padding: 2rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1.5rem;
+        background-color: $background-color-light;
+        border-radius: 1.5rem;
+        box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+            i {
+                font-size: 1.5rem;
+            }
+            p {
+                font-weight: 500;
+            }
+    }
 }
 
 .restaurants {
-    padding: 0 1rem;
+    padding: 3rem 1rem;
     background-color: $background-color-light;
+    &__cards {
+        display: flex;
+    }
     .card {
         width: 100%;
         border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.10);
         &__image {
             height: 10rem;
             width: 100%;
             object-fit: cover;
         }
         &__body {
+            padding: 1rem;
+            background-color: #fff;
             display: flex;
             justify-content: space-between;
             align-items: center;
+        // &__text {
+
+        // }
+        // &__title {
+
+        // }
+        // &__subtitle {
+            
+        // }
+        &__heart {
+            font-size: 10rem;
+        }
         }
     }
 }
@@ -110,8 +164,9 @@ header {
 footer {
     background-color: $background-color-dark;
     color: #fff;
-    padding-left: 1rem;
+    padding: 1.5rem 1rem;
     h4 {
+        margin-bottom: 1rem;
         font-family: $title-font;
         font-size: 1.2rem;
     } 
