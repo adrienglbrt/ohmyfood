@@ -128,21 +128,40 @@ main h1, main h2 {
   flex-direction: column;
   row-gap: 1rem;
 }
+@media only screen and (min-width: 780px) {
+  .restaurants__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    justify-content: space-between;
+  }
+}
 .restaurants .card {
   width: 100%;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.restaurants .card a {
+  color: #000;
+}
+@media only screen and (min-width: 780px) {
+  .restaurants .card {
+    width: calc(50% - 2rem);
+  }
 }
 .restaurants .card__label {
   position: absolute;
-  margin-top: 1rem;
-  right: 2rem;
+  top: 1rem;
+  right: 1rem;
   background-color: #99e2d0;
   color: #008766;
   font-weight: 500;
   padding: 0.3rem 0.5rem;
   border-radius: 0.2rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 .restaurants .card__image {
   height: 10rem;
