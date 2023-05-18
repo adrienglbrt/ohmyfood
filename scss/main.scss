@@ -8,6 +8,9 @@ $tertiary-color: #99e2d0;
 $background-color-light: #f6f6f6;
 $background-color-mid: #eaeaea;
 $background-color-dark: #353535;
+$complementary-color-1: #008766;
+$complementary-color-2: #89c8fa;
+$complementary-color-3: #003a68;
 
 // Base
 
@@ -153,6 +156,16 @@ main {
         border-radius: 1rem;
         overflow: hidden;
         box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.10);
+        &__label {
+            position: absolute;
+            margin-top: 1rem;
+            right: 2rem;
+            background-color: $tertiary-color;
+            color: $complementary-color-1;
+            font-weight: 500;
+            padding: 0.3rem 0.5rem;
+            border-radius: 0.2rem;
+        }
         &__image {
             height: 10rem;
             width: 100%;

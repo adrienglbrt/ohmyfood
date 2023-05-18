@@ -134,6 +134,16 @@ main h1, main h2 {
   overflow: hidden;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
 }
+.restaurants .card__label {
+  position: absolute;
+  margin-top: 1rem;
+  right: 2rem;
+  background-color: #99e2d0;
+  color: #008766;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
+}
 .restaurants .card__image {
   height: 10rem;
   width: 100%;
