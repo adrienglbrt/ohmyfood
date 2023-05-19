@@ -96,14 +96,23 @@ main {
     padding: 3rem 1.2rem;
     background-color: $background-color-light;
     text-align: center;
+    @media only screen and (min-width: 1024px) {
+        padding: 3rem calc((100vw - 1024px) / 2);
+    }
 }
 
 .tutorial {
     padding: 3rem 1rem;
+    @media only screen and (min-width: 1024px) {
+        padding: 3rem calc((100vw - 1024px) / 2);
+    }
     &__steps {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        @media only screen and (min-width: 900px) {
+            flex-direction: row;
+        }
     }
     &__step {
         padding: 2rem 0;
@@ -113,6 +122,9 @@ main {
         background-color: $background-color-light;
         border-radius: 1.5rem;
         box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+        @media only screen and (min-width: 900px) {
+            width: 30%;
+        }
     }
     &__step-content {
         display: flex;
@@ -146,6 +158,9 @@ main {
 .restaurants {
     padding: 3rem 1rem;
     background-color: $background-color-light;
+    @media only screen and (min-width: 1024px) {
+        padding: 3rem calc((100vw - 1024px) / 2);
+    }
     &__cards {
         display: flex;
         flex-direction: column;
@@ -213,6 +228,8 @@ main {
 // Footer
 
 footer {
+    display: flex;
+    flex-direction: column;
     background-color: $background-color-dark;
     color: #fff;
     padding: 1.5rem 1rem;
@@ -221,6 +238,10 @@ footer {
         font-family: $title-font;
         font-size: 1.2rem;
     } 
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
     li {
         margin-bottom: 0.5rem;
     }
@@ -229,6 +250,16 @@ footer {
     }
     i {
         width: 2rem; 
+    }
+    @media only screen and (min-width: 780px) {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 4rem;
+        ul {
+            flex-direction: row;
+            gap: 2rem;
+        }
     }
 }
 

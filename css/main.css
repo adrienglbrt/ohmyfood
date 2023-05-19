@@ -73,14 +73,29 @@ main h1, main h2 {
   background-color: #f6f6f6;
   text-align: center;
 }
+@media only screen and (min-width: 1024px) {
+  .introduction {
+    padding: 3rem calc((100vw - 1024px) / 2);
+  }
+}
 
 .tutorial {
   padding: 3rem 1rem;
+}
+@media only screen and (min-width: 1024px) {
+  .tutorial {
+    padding: 3rem calc((100vw - 1024px) / 2);
+  }
 }
 .tutorial__steps {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+@media only screen and (min-width: 900px) {
+  .tutorial__steps {
+    flex-direction: row;
+  }
 }
 .tutorial__step {
   padding: 2rem 0;
@@ -90,6 +105,11 @@ main h1, main h2 {
   background-color: #f6f6f6;
   border-radius: 1.5rem;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+}
+@media only screen and (min-width: 900px) {
+  .tutorial__step {
+    width: 30%;
+  }
 }
 .tutorial__step-content {
   display: flex;
@@ -122,6 +142,11 @@ main h1, main h2 {
 .restaurants {
   padding: 3rem 1rem;
   background-color: #f6f6f6;
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants {
+    padding: 3rem calc((100vw - 1024px) / 2);
+  }
 }
 .restaurants__cards {
   display: flex;
@@ -191,6 +216,8 @@ main h1, main h2 {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: #353535;
   color: #fff;
   padding: 1.5rem 1rem;
@@ -200,6 +227,10 @@ footer h4 {
   font-family: "Shrikhand", cursive;
   font-size: 1.2rem;
 }
+footer ul {
+  display: flex;
+  flex-direction: column;
+}
 footer li {
   margin-bottom: 0.5rem;
 }
@@ -208,6 +239,18 @@ footer a {
 }
 footer i {
   width: 2rem;
+}
+@media only screen and (min-width: 780px) {
+  footer {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 4rem;
+  }
+  footer ul {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
