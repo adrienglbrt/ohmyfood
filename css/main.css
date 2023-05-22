@@ -47,11 +47,15 @@ button {
 }
 
 @keyframes hideLoader {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  99% {
     opacity: 0;
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100%);
   }
 }
 .loader {
@@ -252,6 +256,20 @@ main h1, main h2 {
 }
 .restaurants .card__subtitle {
   font-weight: 300;
+}
+.restaurants .card input[type=checkbox] {
+  display: none;
+}
+.restaurants .card input[type=checkbox]:checked + label {
+  background-image: url(../assets/images/icons/heart-filled.svg);
+}
+.restaurants .card label {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../assets/images/icons/heart-transparent.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 footer {

@@ -66,13 +66,18 @@ button {
 }
 
 @keyframes hideLoader {
-    from {
+    0% {
         opacity: 1;
     }
-    to {
+    99% {
         opacity: 0;
+        transform: translate(0, 0)
+    }
+    100% {
+        transform: translate(0, -100%);
     }
 }
+
 
 .loader {
     position: fixed;
@@ -265,8 +270,24 @@ main {
         }
         // &__heart {
         // }
+        input[type=checkbox] {
+            display: none;
+            &:checked + label {
+                background-image: url(../assets/images/icons/heart-filled.svg);
+            }
+        }
+        label {
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-image: url(../assets/images/icons/heart-transparent.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 }
+
+
 
 // Footer
 
