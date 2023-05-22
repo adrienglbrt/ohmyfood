@@ -65,6 +65,36 @@ button {
     }
 }
 
+@keyframes hideLoader {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color-light;
+    z-index: 9999;
+    animation: hideLoader 0.5s 3s forwards;
+    &__content {
+        height: 2rem,
+    }
+    &__logo {
+        font-family: $title-font;
+        font-size: 2rem;
+    }
+}
+
 // Header
 
 header {
