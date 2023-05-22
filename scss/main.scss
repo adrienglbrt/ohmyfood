@@ -53,8 +53,11 @@ button {
         padding: 0.8rem 1.2rem;
         color: #fff;
         font-weight: 500;
-        background: linear-gradient(360deg, $primary-color 0%, $secondary-color 100%);
+        background: linear-gradient(25deg, $primary-color 0%, $secondary-color 100%);
         box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.25);
+        &:hover {
+            background: linear-gradient(325deg, $primary-color 0%, $secondary-color 100%);
+        }
     }
 }
 
