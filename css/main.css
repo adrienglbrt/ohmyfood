@@ -29,6 +29,7 @@ button {
 }
 
 .button--primary {
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   margin: 2rem 0;
   border: none;
@@ -36,11 +37,12 @@ button {
   padding: 0.8rem 1.2rem;
   color: #fff;
   font-weight: 500;
-  background: linear-gradient(25deg, #9356dc 0%, #ff79dA 100%);
+  background: linear-gradient(125deg, #9356dc 0%, #ff79dA 100%);
   box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease-in-out;
 }
 .button--primary:hover {
-  background: linear-gradient(325deg, #9356dc 0%, #ff79dA 100%);
+  background: linear-gradient(55deg, #9356dc 0%, #ff79dA 100%);
 }
 
 header {
