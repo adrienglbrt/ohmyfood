@@ -37,12 +37,12 @@ button {
   padding: 0.8rem 1.2rem;
   color: #fff;
   font-weight: 500;
-  background: linear-gradient(125deg, #9356dc 0%, #ff79dA 100%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79dA 123.93%);
   box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.25);
   transition: all 0.5s ease-in-out;
 }
 .button--primary:hover {
-  background: linear-gradient(55deg, #9356dc 0%, #ff79dA 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
 header {
