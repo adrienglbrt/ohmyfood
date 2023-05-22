@@ -110,6 +110,9 @@ main {
     @media only screen and (min-width: 1024px) {
         padding: 3rem calc((100vw - 1024px) / 2);
     }
+    p {
+        font-weight: 300;
+    }
 }
 
 .tutorial {
@@ -230,9 +233,8 @@ main {
         &__subtitle {
             font-weight: 300;
         }
-        &__heart {
-            font-size: 1.5rem;
-        }
+        // &__heart {
+        // }
     }
 }
 

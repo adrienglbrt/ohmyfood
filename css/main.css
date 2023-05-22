@@ -88,6 +88,9 @@ main h1, main h2 {
     padding: 3rem calc((100vw - 1024px) / 2);
   }
 }
+.introduction p {
+  font-weight: 300;
+}
 
 .tutorial {
   padding: 3rem 1rem;
@@ -220,9 +223,6 @@ main h1, main h2 {
 }
 .restaurants .card__subtitle {
   font-weight: 300;
-}
-.restaurants .card__heart {
-  font-size: 1.5rem;
 }
 
 footer {
