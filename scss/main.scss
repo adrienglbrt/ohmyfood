@@ -95,9 +95,17 @@ a {
     }
 }
 
-// @keyframes logoAnimation {
-
-// }
+@keyframes textAnimation {
+    0% {
+        transform: translate(0, 5rem)
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, -5rem)
+    }
+}
 
 
 .loader {
@@ -113,11 +121,26 @@ a {
     z-index: 9999;
     animation: hideLoader 0.5s 3s forwards;
     &__content {
-        height: 2rem,
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 1rem;
     }
     &__logo {
+        display: inline-block;
         font-family: $title-font;
         font-size: 2rem;
+        &--1st {
+            animation: textAnimation 2s 0.5s both;
+        }
+        &--2nd {
+            animation: textAnimation 2s 0.7s both;
+        }
+        &--3rd {
+            animation: textAnimation 2s 0.9s both;
+        }
     }
 }
 

@@ -75,6 +75,17 @@ a {
     transform: translate(0, -100%);
   }
 }
+@keyframes textAnimation {
+  0% {
+    transform: translate(0, 5rem);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -5rem);
+  }
+}
 .loader {
   position: fixed;
   top: 0;
@@ -90,10 +101,25 @@ a {
 }
 .loader__content {
   height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 1rem;
 }
 .loader__logo {
+  display: inline-block;
   font-family: "Shrikhand", cursive;
   font-size: 2rem;
+}
+.loader__logo--1st {
+  animation: textAnimation 2s 0.5s both;
+}
+.loader__logo--2nd {
+  animation: textAnimation 2s 0.7s both;
+}
+.loader__logo--3rd {
+  animation: textAnimation 2s 0.9s both;
 }
 
 header {
