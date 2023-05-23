@@ -40,13 +40,8 @@ a {
     text-decoration: none;
 }
 
-button {
-    cursor: pointer;
-}
-
 .button {
     &--primary {
-        font-family: $main-font;
         font-size: 1rem;
         margin: 2rem 0;
         border: none;
@@ -54,13 +49,35 @@ button {
         padding: 0.8rem 1.2rem;
         color: #fff;
         font-weight: 500;
-        background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        z-index: 0;
         box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.25);
         transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
+            z-index: -1;
+        }
+        &::after {
+            opacity: 0;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, $primary-color -5.2%, $secondary-color 110.74%);
+            transition: all 0.2s ease-in-out;
+        }
         &:hover {
-            // background: linear-gradient(200deg, $primary-color -5.2%, $secondary-color 110.74%);
-            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
             box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.35);
+            &::after {
+                opacity: 1;
+            }
         }
     }
 }
