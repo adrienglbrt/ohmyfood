@@ -265,6 +265,7 @@ main h1, main h2 {
 }
 .restaurants .card label {
   display: inline-block;
+  cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
   background-image: url(../assets/images/icons/heart-transparent.svg);
