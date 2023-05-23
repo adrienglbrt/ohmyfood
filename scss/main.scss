@@ -102,7 +102,7 @@ a {
     }
     50% {
         transform: translate(0, 0);
-        opacity: 1
+        opacity: 1;
     }
     100% {
         transform: translate(0, -3rem);
@@ -318,25 +318,52 @@ main {
         &__subtitle {
             font-weight: 300;
         }
-        // &__heart {
-        // }
-        input[type=checkbox] {
-            display: none;
-            &:checked + label {
-                background-image: url(../assets/images/icons/heart-filled.svg);
+        &__heart {
+            font-size: 1.5rem;
+            // font-weight: 100;
+            &:hover {
+
             }
         }
-        label {
-            display: inline-block;
-            cursor: pointer;
-            width: 1.5rem;
-            height: 1.5rem;
-            background-image: url(../assets/images/icons/heart-transparent.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+
+        // Set-up with checkbox
+
+        // input[type=checkbox] {
+        //     display: none;
+        //     &:checked + label {
+        //         background-image: url(../assets/images/icons/heart-filled.svg);
+        //         animation: clickHeart 0.3s ease forwards;
+        //         // &:hover {
+        //         // }
+        //     }
+        // }
+        // label {
+        //     display: inline-block;
+        //     cursor: pointer;
+        //     width: 1.5rem;
+        //     height: 1.5rem;
+        //     background-image: url(../assets/images/icons/heart-transparent.svg);
+        //     background-repeat: no-repeat;
+        //     background-position: center;
+        //     animation: clickHeart 0.3s ease forwards;
+        //     // &:hover {
+        //     // }
+        // }
     }
 }
+
+// Checkbox set-up keyframes
+
+// @keyframes clickHeart {
+//     0% {
+//         opacity: 0;
+//         transform: scale(0);
+//     }
+//     100% {
+//         opacity: 1;
+//         transform: scale(1);
+//     }
+// }
 
 
 
