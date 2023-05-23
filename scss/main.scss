@@ -97,13 +97,15 @@ a {
 
 @keyframes textAnimation {
     0% {
-        transform: translate(0, 5rem)
+        transform: translate(0, 3rem);
+        opacity: 0;
     }
     50% {
         transform: translate(0, 0);
+        opacity: 1
     }
     100% {
-        transform: translate(0, -5rem)
+        transform: translate(0, -3rem);
     }
 }
 
@@ -119,7 +121,7 @@ a {
     align-items: center;
     background-color: $background-color-light;
     z-index: 9999;
-    animation: hideLoader 0.5s 3s forwards;
+    animation: hideLoader 0.2s 3s forwards;
     &__content {
         height: 2rem;
         display: flex;
@@ -133,13 +135,13 @@ a {
         font-family: $title-font;
         font-size: 2rem;
         &--1st {
-            animation: textAnimation 2s 0.5s both;
+            animation: textAnimation 2.5s 0.5s both;
         }
         &--2nd {
-            animation: textAnimation 2s 0.7s both;
+            animation: textAnimation 2.5s 0.7s both;
         }
         &--3rd {
-            animation: textAnimation 2s 0.9s both;
+            animation: textAnimation 2.5s 0.9s both;
         }
     }
 }

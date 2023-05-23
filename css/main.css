@@ -77,13 +77,15 @@ a {
 }
 @keyframes textAnimation {
   0% {
-    transform: translate(0, 5rem);
+    transform: translate(0, 3rem);
+    opacity: 0;
   }
   50% {
     transform: translate(0, 0);
+    opacity: 1;
   }
   100% {
-    transform: translate(0, -5rem);
+    transform: translate(0, -3rem);
   }
 }
 .loader {
@@ -97,7 +99,7 @@ a {
   align-items: center;
   background-color: #f6f6f6;
   z-index: 9999;
-  animation: hideLoader 0.5s 3s forwards;
+  animation: hideLoader 0.2s 3s forwards;
 }
 .loader__content {
   height: 2rem;
@@ -113,13 +115,13 @@ a {
   font-size: 2rem;
 }
 .loader__logo--1st {
-  animation: textAnimation 2s 0.5s both;
+  animation: textAnimation 2.5s 0.5s both;
 }
 .loader__logo--2nd {
-  animation: textAnimation 2s 0.7s both;
+  animation: textAnimation 2.5s 0.7s both;
 }
 .loader__logo--3rd {
-  animation: textAnimation 2s 0.9s both;
+  animation: textAnimation 2.5s 0.9s both;
 }
 
 header {
