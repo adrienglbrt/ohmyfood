@@ -124,23 +124,31 @@ a {
   animation: textAnimation 2.5s 0.9s both;
 }
 
-header {
+.header {
+  position: relative;
   height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header a {
+.header__link {
   display: flex;
   align-items: center;
 }
-header img {
+.header__logo {
   width: 12rem;
 }
-
-main h1, main h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+.header__back {
+  position: absolute;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+}
+.header__arrow {
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .location {
@@ -166,6 +174,10 @@ main h1, main h2 {
     padding: 3rem calc((100vw - 1024px) / 2);
   }
 }
+.introduction h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 .introduction p {
   font-weight: 300;
 }
@@ -173,12 +185,16 @@ main h1, main h2 {
 .tutorial {
   padding: 3rem 1rem;
 }
+.tutorial h2 {
+  font-size: 1.5rem;
+}
 @media only screen and (min-width: 1024px) {
   .tutorial {
     padding: 3rem calc((100vw - 1024px) / 2);
   }
 }
 .tutorial__steps {
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -234,12 +250,16 @@ main h1, main h2 {
   padding: 3rem 1rem;
   background-color: #f6f6f6;
 }
+.restaurants h2 {
+  font-size: 1.5rem;
+}
 @media only screen and (min-width: 1024px) {
   .restaurants {
     padding: 3rem calc((100vw - 1024px) / 2);
   }
 }
 .restaurants__cards {
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -350,6 +370,77 @@ main h1, main h2 {
 }
 .restaurants .card__heart:hover > div > :last-child {
   opacity: 0;
+}
+
+.cover {
+  object-fit: cover;
+  height: 17rem;
+  width: 100%;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem 0 1rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  position: relative;
+  top: -2rem;
+}
+@media only screen and (min-width: 640px) {
+  .menu {
+    padding: 2rem calc((100vw - 640px) / 2) 0 calc((100vw - 640px) / 2);
+  }
+}
+.menu__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 1rem;
+  text-align: center;
+}
+.menu__category {
+  margin-top: 3rem;
+}
+.menu__category-title {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+.menu__stroke {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #99e2d0;
+}
+.menu__cards {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.menu .card {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.menu .card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.menu .card__title {
+  font-weight: 500;
+}
+.menu .card__description {
+  font-weight: 300;
+}
+.menu .card__price {
+  font-weight: 700;
+}
+.menu .order {
+  text-align: center;
 }
 
 footer {

@@ -1,3 +1,6 @@
+@use "variables";
+@use "restaurant";
+
 // Variables
 
 $title-font: 'Shrikhand', cursive;
@@ -148,28 +151,35 @@ a {
 
 // Header
 
-header {
+.header {
+    position: relative;
     height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    a {
+    &__link {
         display: flex;
         align-items: center;
     }
-    img {
+    &__logo {
         width: 12rem;
     }
-}
-
-// Main
-
-main {
-    h1, h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
+    &__back {
+        position: absolute;
+        left: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    &__arrow {
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
+
+
+// Index
 
 .location {
     height: 3.5rem;
@@ -191,6 +201,10 @@ main {
     @media only screen and (min-width: 1024px) {
         padding: 3rem calc((100vw - 1024px) / 2);
     }
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
     p {
         font-weight: 300;
     }
@@ -198,10 +212,14 @@ main {
 
 .tutorial {
     padding: 3rem 1rem;
+    h2 {
+        font-size: 1.5rem;
+    }
     @media only screen and (min-width: 1024px) {
         padding: 3rem calc((100vw - 1024px) / 2);
     }
     &__steps {
+        margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
@@ -253,10 +271,14 @@ main {
 .restaurants {
     padding: 3rem 1rem;
     background-color: $background-color-light;
+    h2 {
+        font-size: 1.5rem;
+    }
     @media only screen and (min-width: 1024px) {
         padding: 3rem calc((100vw - 1024px) / 2);
     }
     &__cards {
+        margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
@@ -407,6 +429,77 @@ main {
 //     }
 // }
 
+// Restaurant
+
+.cover {
+    object-fit: cover;
+    height: 17rem;
+    width: 100%;
+}
+
+.menu {
+    background-color: $background-color-light;
+    padding: 2rem 1rem 0 1rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    position: relative;
+    top: -2rem;
+    @media only screen and (min-width: 640px) {
+        padding: 2rem calc((100vw - 640px) / 2) 0 calc((100vw - 640px) / 2);
+    }
+
+    &__title {
+        font-family: $title-font;
+        font-size: 1rem;
+        text-align: center;
+    }
+    &__category {
+        margin-top: 3rem;
+    }
+    &__category-title {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+    }
+    &__stroke {
+        width: 3rem;
+        height: 0.2rem;
+        background-color: $tertiary-color;
+    }
+    &__cards {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.10);
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        &__text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        &__title {
+            font-weight: 500;
+        }
+        &__description {
+            font-weight: 300;
+        }
+        &__price {
+            font-weight: 700;
+        }
+    }
+    .order {
+        text-align: center;
+    }
+}
 
 
 // Footer
