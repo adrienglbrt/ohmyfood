@@ -569,11 +569,17 @@ footer {
     @media only screen and (min-width: 900px) {
         flex-direction: row-reverse;
         justify-content: flex-start;
-        align-items: baseline;
+        align-items: flex-end;
         gap: 4rem;
+        h4 {
+            margin-bottom: 0;
+        }
         ul {
             flex-direction: row;
             gap: 2rem;
+        }
+        li {
+        margin-bottom: 0;
         }
     }
 }

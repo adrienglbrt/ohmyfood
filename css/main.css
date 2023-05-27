@@ -513,12 +513,18 @@ footer i {
   footer {
     flex-direction: row-reverse;
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: flex-end;
     gap: 4rem;
+  }
+  footer h4 {
+    margin-bottom: 0;
   }
   footer ul {
     flex-direction: row;
     gap: 2rem;
+  }
+  footer li {
+    margin-bottom: 0;
   }
 }
 
