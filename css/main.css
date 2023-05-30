@@ -401,6 +401,21 @@ a {
     margin: 0 auto;
   }
 }
+.menu::after {
+  content: "";
+  height: 2rem;
+  width: 100%;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+}
+@media only screen and (min-width: 1024px) {
+  .menu::after {
+    width: 1024px;
+  }
+}
 .menu__title {
   font-family: "Shrikhand", cursive;
   font-size: 1rem;
