@@ -454,12 +454,17 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 1;
 }
 .menu .card__title {
   font-weight: 500;
 }
 .menu .card__description {
   font-weight: 300;
+  max-width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu .card__price {
   font-weight: 700;

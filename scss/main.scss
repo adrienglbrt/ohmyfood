@@ -1,19 +1,19 @@
-@use "variables";
-@use "restaurant";
+@import "variables";
+// @use "restaurant";
 
 // Variables
 
-$title-font: 'Shrikhand', cursive;
-$main-font: 'Roboto', sans-serif;
-$primary-color: #9356dc;
-$secondary-color: #ff79dA;
-$tertiary-color: #99e2d0;
-$background-color-light: #f6f6f6;
-$background-color-mid: #eaeaea;
-$background-color-dark: #353535;
-$complementary-color-1: #008766;
-$complementary-color-2: #89c8fa;
-$complementary-color-3: #003a68;
+// $title-font: 'Shrikhand', cursive;
+// $main-font: 'Roboto', sans-serif;
+// $primary-color: #9356dc;
+// $secondary-color: #ff79dA;
+// $tertiary-color: #99e2d0;
+// $background-color-light: #f6f6f6;
+// $background-color-mid: #eaeaea;
+// $background-color-dark: #353535;
+// $complementary-color-1: #008766;
+// $complementary-color-2: #89c8fa;
+// $complementary-color-3: #003a68;
 
 // Base
 
@@ -507,12 +507,18 @@ a {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
+            flex: 1;
         }
         &__title {
             font-weight: 500;
         }
         &__description {
             font-weight: 300;
+            max-width: 80%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            
         }
         &__price {
             font-weight: 700;
