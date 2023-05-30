@@ -102,13 +102,16 @@ a {
     0% {
         transform: translate(0, 3rem);
         opacity: 0;
+        animation-timing-function: cubic-bezier(0.39,0.57,0.56,1);
     }
     50% {
         transform: translate(0, 0);
         opacity: 1;
+        animation-timing-function: cubic-bezier(0.55,0.06,0.68,0.19);
     }
     100% {
         transform: translate(0, -3rem);
+        opacity: 0;
     }
 }
 
@@ -138,13 +141,13 @@ a {
         font-family: $title-font;
         font-size: 2rem;
         &--1st {
-            animation: textAnimation 2.5s 0.5s both;
+            animation: textAnimation 2.5s 0.2s both;
         }
         &--2nd {
-            animation: textAnimation 2.5s 0.7s both;
+            animation: textAnimation 2.5s 0.35s both;
         }
         &--3rd {
-            animation: textAnimation 2.5s 0.9s both;
+            animation: textAnimation 2.5s 0.5s both;
         }
     }
 }
@@ -530,7 +533,7 @@ a {
             transition: transform 0.2s ease-in-out;
             i {
                 color: #fff;
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
     }
