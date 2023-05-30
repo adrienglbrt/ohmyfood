@@ -484,6 +484,56 @@ a {
   text-align: center;
 }
 
+@keyframes menuAppear {
+  0% {
+    transform: translate(0, 2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+.anim__appear {
+  animation: menuAppear 0.6s 0s backwards;
+}
+.anim--timing1 {
+  animation-delay: 0.05s;
+}
+.anim--timing2 {
+  animation-delay: 0.1s;
+}
+.anim--timing3 {
+  animation-delay: 0.15s;
+}
+.anim--timing4 {
+  animation-delay: 0.2s;
+}
+.anim--timing5 {
+  animation-delay: 0.25s;
+}
+.anim--timing6 {
+  animation-delay: 0.3s;
+}
+.anim--timing7 {
+  animation-delay: 0.35s;
+}
+.anim--timing8 {
+  animation-delay: 0.4s;
+}
+.anim--timing9 {
+  animation-delay: 0.45s;
+}
+.anim--timing10 {
+  animation-delay: 0.5s;
+}
+.anim--timing11 {
+  animation-delay: 0.55s;
+}
+.anim--timing12 {
+  animation-delay: 0.6s;
+}
+
 footer {
   display: flex;
   flex-direction: column;

@@ -539,6 +539,31 @@ a {
     }
 }
 
+@keyframes menuAppear {
+    0% {
+        transform: translate(0, 2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+.anim {
+    &__appear {
+        animation: menuAppear 0.6s 0s backwards;
+    }
+    $menuItems: 12;
+    $animDelay: 0.05s;
+    @for $i from 1 through $menuItems {
+        &--timing#{$i} {
+            animation-delay: calc($animDelay * $i);
+        }
+    }
+}
+
+
 
 // Footer
 
