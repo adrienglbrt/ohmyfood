@@ -91,7 +91,7 @@ a {
     }
     99% {
         opacity: 0;
-        transform: translate(0, 0)
+        transform: translate(0, 0);
     }
     100% {
         transform: translate(0, -100%);
@@ -353,7 +353,7 @@ a {
                 justify-content: flex-end;
                 gap: 0.5rem;
                 transform: translate(0,0);
-                transition: transform 0.2s ease-out;
+                transition: transform 0.2s cubic-bezier(1,0,0.55,0.95);
                 &:active > :nth-child(2) {
                     opacity: 1;
                 }
