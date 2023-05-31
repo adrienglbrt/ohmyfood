@@ -377,48 +377,37 @@ footer i {
   width: 2rem;
   height: 2rem;
   overflow: hidden;
-  font-size: 1.5rem;
-  color: #000;
 }
-.restaurants .card__heart-container {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  transform: translate(0, 0);
-  transition: transform 0.2s cubic-bezier(1, 0, 0.55, 0.95);
+.restaurants .card__heart input[type=checkbox] {
+  display: none;
 }
-.restaurants .card__heart-container:active > :nth-child(2) {
-  opacity: 1;
+.restaurants .card__heart input[type=checkbox]:checked + label {
+  background-image: url(../assets/images/icons/heart-filled.svg);
+  transform: scale(0);
+  animation: clickHeart 0.2s both;
 }
-.restaurants .card__heart--hover {
-  color: #9356dc;
-  opacity: 0;
-  transform: scale(1);
-  transition: opacity 0.2s ease-in-out;
+.restaurants .card__heart label {
+  display: inline-block;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../assets/images/icons/heart-transparent-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.2s cubic-bezier(1, 0, 0.55, 0.95);
 }
-.restaurants .card__heart--clicked {
-  position: absolute;
-  right: 2rem;
-  color: #9356dc;
-  opacity: 0;
-  transition: opacity 0.1s ease-in;
-}
-.restaurants .card__heart--displayed {
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out, transform 0.2s;
-}
-.restaurants .card__heart:hover > div {
-  transform: translate(2rem, 0);
-}
-.restaurants .card__heart:hover > div > :first-child {
-  opacity: 1;
-}
-.restaurants .card__heart:hover > div > :last-child {
-  opacity: 0;
+.restaurants .card__heart label:hover {
+  background-image: url(../assets/images/icons/heart-transparent-color.svg);
 }
 
+@keyframes clickHeart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .cover {
   object-fit: cover;
   height: 17rem;
