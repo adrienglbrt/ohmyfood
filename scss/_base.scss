@@ -1,0 +1,215 @@
+@import "variables";
+
+// Base styles
+
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: $main-font;
+}
+
+p {
+    font-size: 1rem;
+}
+    
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    &--primary {
+        font-size: 1rem;
+        margin: 2rem 0;
+        border: none;
+        border-radius: 1.5rem;
+        padding: 0.8rem 1.2rem;
+        color: #fff;
+        font-weight: 500;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        z-index: 0;
+        box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.25);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
+            z-index: -1;
+        }
+        &::after {
+            opacity: 0;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, $primary-color -5.2%, $secondary-color 110.74%);
+            transition: all 0.2s ease-in-out;
+        }
+        &:hover {
+            box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.35);
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+// Header
+
+.header {
+    position: relative;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        width: 12rem;
+    }
+    &__back {
+        position: absolute;
+        left: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    &__arrow {
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+
+// Footer
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color-dark;
+    color: #fff;
+    padding: 1.5rem 1rem;
+    h4 {
+        margin-bottom: 1rem;
+        font-family: $title-font;
+        font-size: 1.2rem;
+    } 
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+    li {
+        margin-bottom: 0.5rem;
+    }
+    a {
+        color: #fff;
+    }
+    i {
+        width: 2rem; 
+    }
+    @media only screen and (min-width: 900px) {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 4rem;
+        h4 {
+            margin-bottom: 0;
+        }
+        ul {
+            flex-direction: row;
+            gap: 2rem;
+        }
+        li {
+        margin-bottom: 0;
+        }
+    }
+}
+
+// Loader
+
+@keyframes hideLoader {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, -100%);
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        transform: translate(0, 3rem);
+        opacity: 0;
+        animation-timing-function: cubic-bezier(0.39,0.57,0.56,1);
+    }
+    50% {
+        transform: translate(0, 0);
+        opacity: 1;
+        animation-timing-function: cubic-bezier(0.55,0.06,0.68,0.19);
+    }
+    100% {
+        transform: translate(0, -3rem);
+        opacity: 0;
+    }
+}
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color-light;
+    z-index: 9999;
+    animation: hideLoader 0.2s 3s forwards;
+    &__content {
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 1rem;
+    }
+    &__logo {
+        display: inline-block;
+        font-family: $title-font;
+        font-size: 2rem;
+        &--1st {
+            animation: textAnimation 2.5s 0.2s both;
+        }
+        &--2nd {
+            animation: textAnimation 2.5s 0.35s both;
+        }
+        &--3rd {
+            animation: textAnimation 2.5s 0.5s both;
+        }
+    }
+}
