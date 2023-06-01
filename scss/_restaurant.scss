@@ -34,10 +34,43 @@
             width: 1024px;
         }
     }
+    &__header {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 22rem;
+    }
     &__title {
         font-family: $title-font;
-        font-size: 1rem;
+        font-size: 2rem;
         text-align: center;
+    }
+    &__heart {
+        width: 2rem;
+        height: 2rem;
+        overflow: hidden;
+        input[type=checkbox] {
+            display: none;
+            &:checked + label {
+                background-image: url(../assets/images/icons/heart-filled.svg);
+                transform: scale(0);
+                animation: clickHeart 0.2s both;
+            }
+        }
+        label {
+            display: inline-block;
+            cursor: pointer;
+            width: 2rem;
+            height: 2rem;
+            background-image: url(../assets/images/icons/heart-transparent-black.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-image 0.2s cubic-bezier(1,0,0.55,0.95);
+            &:hover {
+                background-image: url(../assets/images/icons/heart-transparent-color.svg);
+            }
+        }
     }
     &__category {
         margin-top: 3rem;
@@ -144,7 +177,7 @@
     &__appear {
         animation: menuAppear 0.6s 0s backwards;
     }
-    $menuItems: 12;
+    $menuItems: 13;
     $animDelay: 0.05s;
     @for $i from 1 through $menuItems {
         &--timing#{$i} {

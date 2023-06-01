@@ -9,10 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
-    <!-- <script src="https://kit.fontawesome.com/b76aa4c2e9.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/b76aa4c2e9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,10 +18,14 @@
         <h1 title="Ohmyfood"><a href="#" class="header__link"><img src="./assets/images/logo/ohmyfood@2x.svg" class="header__logo"></a></h1>
     </header>
     <main>
-        <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="cover">
+        <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" class="cover">
         <section class="menu">
-            <div class="menu__title">
-                <h1>La Palette du goût</h1>
+            <div class="menu__header">
+                <h1 class="menu__title">La Note enchantée</h1>
+                <div class="menu__heart">
+                    <input type="checkbox" id="card__heart2">
+                    <label for="card__heart2"></label>             
+                </div>  
             </div>
             <div class="menu__category">
                 <h2 class="menu__category-title anim__appear anim--timing1">Entrées</h2>
@@ -33,8 +34,8 @@
                     <article class="card anim__appear anim--timing2">
                         <div class="card__content">
                             <div class="card__text">
-                                <h3 class="card__title">Fricassée d'escargots</h3>
-                                <p class="card__description">Au piment d'Espelette</p>
+                                <h3 class="card__title">Tartare de thon</h3>
+                                <p class="card__description">Assaisonné au yuzu</p>
                             </div>
                             <p class="card__price">25€</p>
                         </div>
@@ -45,8 +46,8 @@
                     <article class="card anim__appear anim--timing3">
                         <div class="card__content">
                             <div class="card__text">
-                                <h3 class="card__title">Foie gras de canard mi-cuit</h3>
-                                <p class="card__description">Et ses copeaux de truffe noire</p>
+                                <h3 class="card__title">Bouchée de homard croustillant</h3>
+                                <p class="card__description">Et sa farandole de petits légumes</p>
                             </div>
                             <p class="card__price">35€</p>
                         </div>
@@ -57,8 +58,8 @@
                     <article class="card anim__appear anim--timing4">
                         <div class="card__content">
                             <div class="card__text">
-                                <h3 class="card__title">Œuf au plat</h3>
-                                <p class="card__description">Assaisonné à la truffe sur lit de caviar</p>
+                                <h3 class="card__title">Velouté de cèpes</h3>
+                                <p class="card__description">Aux truffes</p>
                             </div>
                             <p class="card__price">20€</p>
                         </div>
@@ -75,8 +76,8 @@
                     <article class="card anim__appear anim--timing6">
                         <div class="card__content">
                             <div class="card__text">
-                                <h3 class="card__title">Filet de bœuf aux herbes</h3>
-                                <p class="card__description">Accompagné de sa ribambelle de légumes</p>
+                                <h3 class="card__title">Poulet rôti aux herbes de Provence</h3>
+                                <p class="card__description">Et sa crème de truffe</p>
                             </div>
                             <p class="card__price">40€</p>
                         </div>
@@ -87,8 +88,8 @@
                     <article class="card anim__appear anim--timing7">
                         <div class="card__content">
                             <div class="card__text">
-                                <h3 class="card__title">Parmentier de queue de bœuf</h3>
-                                <p class="card__description">À la truffe noire sur sa purée de panais</p>
+                                <h3 class="card__title">Langouste rôtie</h3>
+                                <p class="card__description">Et ses légumes de saison</p>
                             </div>
                             <p class="card__price">35€</p>
                         </div>
@@ -99,8 +100,8 @@
                     <article class="card anim__appear anim--timing8">
                         <div class="card__content">
                             <div class="card__text">
-                                <h3 class="card__title">Filet de turbot</h3>
-                                <p class="card__description">Aux agrumes</p>
+                                <h3 class="card__title">Côte de bœeuf Angus</h3>
+                                <p class="card__description">Et sa purée de panais</p>
                             </div>
                             <p class="card__price">44€</p>
                         </div>
@@ -117,10 +118,10 @@
                     <article class="card anim__appear anim--timing10">
                         <div class="card__content">
                             <div class="card__text">
-                                <h3 class="card__title">Paris-Brest</h3>
-                                <p class="card__description">Revisité</p>
+                                <h3 class="card__title">Farandole de desserts</h3>
+                                <p class="card__description">Du chef</p>
                             </div>
-                            <p class="card__price">44€</p>
+                            <p class="card__price">18€</p>
                         </div>
                         <div class="card__check">
                             <i class="fa-solid fa-circle-check"></i>
@@ -129,8 +130,8 @@
                     <article class="card anim__appear anim--timing11">
                         <div class="card__content">
                             <div class="card__text">
-                                <h3 class="card__title">Macaron au chocolat d'exception</h3>
-                                <p class="card__description">Et glace à la vanille de Madagascar</p>
+                                <h3 class="card__title">Crème brûlée</h3>
+                                <p class="card__description">Revisitée</p>
                             </div>
                             <p class="card__price">22€</p>
                         </div>
@@ -141,8 +142,8 @@
                     <article class="card anim__appear anim--timing12">
                         <div class="card__content">
                             <div class="card__text">
-                                <h3 class="card__title">Mousse au chocolat </h3>
-                                <p class="card__description">Au piment d'Espelette et à la truffe noire</p>
+                                <h3 class="card__title">Tiramisu</h3>
+                                <p class="card__description">À la noisette</p>
                             </div>
                             <p class="card__price">23€</p>
                         </div>
@@ -181,8 +182,8 @@
             </li>
             <li class="footer__item">
                 <div class="footer__container">
-                    <a href="#" class="footer__link footer__link--displayed">Contact</a>
-                    <a href="#" class="footer__link footer__link--hidden">Contact</a>
+                    <a href="mailto:contact@email.com" class="footer__link footer__link--displayed">Contact</a>
+                    <a href="mailto:contact@email.com" class="footer__link footer__link--hidden">Contact</a>
                 </div>
             </li>
         </ul>

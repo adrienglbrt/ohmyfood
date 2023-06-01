@@ -474,10 +474,43 @@ a {
     width: 1024px;
   }
 }
+.menu__header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 22rem;
+}
 .menu__title {
   font-family: "Shrikhand", cursive;
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center;
+}
+.menu__heart {
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+}
+.menu__heart input[type=checkbox] {
+  display: none;
+}
+.menu__heart input[type=checkbox]:checked + label {
+  background-image: url(../assets/images/icons/heart-filled.svg);
+  transform: scale(0);
+  animation: clickHeart 0.2s both;
+}
+.menu__heart label {
+  display: inline-block;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../assets/images/icons/heart-transparent-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.2s cubic-bezier(1, 0, 0.55, 0.95);
+}
+.menu__heart label:hover {
+  background-image: url(../assets/images/icons/heart-transparent-color.svg);
 }
 .menu__category {
   margin-top: 3rem;
@@ -613,6 +646,9 @@ a {
 }
 .anim--timing12 {
   animation-delay: 0.6s;
+}
+.anim--timing13 {
+  animation-delay: 0.65s;
 }
 
 /*# sourceMappingURL=main.css.map */
