@@ -120,13 +120,13 @@
             flex-direction: column;
             gap: 0.5rem;
             flex: 1;
+            max-width: 90%;
         }
         &__title {
             font-weight: 500;
         }
         &__description {
             font-weight: 300;
-            max-width: 80%;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
