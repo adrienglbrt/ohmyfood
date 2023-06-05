@@ -407,6 +407,7 @@ a {
   width: 2rem;
   height: 2rem;
   overflow: hidden;
+  z-index: 1;
 }
 .restaurants .card__heart input[type=checkbox] {
   display: none;
